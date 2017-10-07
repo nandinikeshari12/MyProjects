@@ -10,6 +10,8 @@
 		626228F01F88A58B007409EB /* Button 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 626228EF1F88A58B007409EB /* Button 3.png */; };
 		626228F21F88A887007409EB /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 626228F11F88A887007409EB /* Logo.png */; };
 		626228F81F88AC13007409EB /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 626228F71F88AC13007409EB /* HomeVC.m */; };
+		626228FA1F88DF16007409EB /* line_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 626228F91F88DF16007409EB /* line_button.png */; };
+		626228FD1F88E572007409EB /* MerchantLinkingID.m in Sources */ = {isa = PBXBuildFile; fileRef = 626228FC1F88E572007409EB /* MerchantLinkingID.m */; };
 		6273922B1F879D1B00569BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6273922A1F879D1B00569BEB /* main.m */; };
 		6273922E1F879D1B00569BEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6273922D1F879D1B00569BEB /* AppDelegate.m */; };
 		627392341F879D1B00569BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627392321F879D1B00569BEB /* Main.storyboard */; };
@@ -22,6 +24,9 @@
 		626228F11F88A887007409EB /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		626228F61F88AC13007409EB /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		626228F71F88AC13007409EB /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		626228F91F88DF16007409EB /* line_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_button.png; sourceTree = "<group>"; };
+		626228FB1F88E572007409EB /* MerchantLinkingID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantLinkingID.h; sourceTree = "<group>"; };
+		626228FC1F88E572007409EB /* MerchantLinkingID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantLinkingID.m; sourceTree = "<group>"; };
 		627392261F879D1B00569BEB /* Daily Deals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Deals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6273922A1F879D1B00569BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6273922C1F879D1B00569BEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		626228F31F88A88C007409EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				626228F91F88DF16007409EB /* line_button.png */,
 				627392351F879D1B00569BEB /* Assets.xcassets */,
 				626228EF1F88A58B007409EB /* Button 3.png */,
 				626228F11F88A887007409EB /* Logo.png */,
@@ -58,6 +64,8 @@
 			children = (
 				626228F61F88AC13007409EB /* HomeVC.h */,
 				626228F71F88AC13007409EB /* HomeVC.m */,
+				626228FB1F88E572007409EB /* MerchantLinkingID.h */,
+				626228FC1F88E572007409EB /* MerchantLinkingID.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				626228F21F88A887007409EB /* Logo.png in Resources */,
 				626228F01F88A58B007409EB /* Button 3.png in Resources */,
 				627392341F879D1B00569BEB /* Main.storyboard in Resources */,
+				626228FA1F88DF16007409EB /* line_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				626228F81F88AC13007409EB /* HomeVC.m in Sources */,
+				626228FD1F88E572007409EB /* MerchantLinkingID.m in Sources */,
 				6273922E1F879D1B00569BEB /* AppDelegate.m in Sources */,
 				6273922B1F879D1B00569BEB /* main.m in Sources */,
 			);
