@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"This is Test Git");
+    NSLog(@"This is Test Git After Deletion");
 }
 
 
