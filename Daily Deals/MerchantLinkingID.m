@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 600)];
+   // [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 600)];
     // Do any additional setup after loading the view.
 }
 
@@ -47,7 +47,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-  [self.scrollView setContentOffset:CGPointMake(0,self.merchantIDTxtFld.frame.origin.y+150)];
+  [self.scrollView setContentOffset:CGPointMake(0,self.merchantIDTxtFld.frame.origin.y-200)];
 }
 
 @end
