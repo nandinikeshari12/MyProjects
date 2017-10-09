@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MerchantLinkingID : UIViewController
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UITextField *merchantIDTxtFld;
 
+- (IBAction)activateButtonAction:(id)sender;
 @end

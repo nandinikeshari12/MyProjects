@@ -10,4 +10,6 @@
 
 @interface HomeVC : UIViewController
 
+- (IBAction)enterManuallyButtonAction:(id)sender;
+- (IBAction)scanButtonAction:(id)sender;
 @end

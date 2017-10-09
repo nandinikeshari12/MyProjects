@@ -17,6 +17,7 @@
 		627392341F879D1B00569BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627392321F879D1B00569BEB /* Main.storyboard */; };
 		627392361F879D1B00569BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627392351F879D1B00569BEB /* Assets.xcassets */; };
 		627392391F879D1B00569BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627392371F879D1B00569BEB /* LaunchScreen.storyboard */; };
+		62DB56BA1F8B5673006C9A10 /* PurchaseDealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB56B91F8B5673006C9A10 /* PurchaseDealVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		627392351F879D1B00569BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		627392381F879D1B00569BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6273923A1F879D1B00569BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DB56B81F8B5673006C9A10 /* PurchaseDealVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseDealVC.h; sourceTree = "<group>"; };
+		62DB56B91F8B5673006C9A10 /* PurchaseDealVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseDealVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 		626228F41F88A8A3007409EB /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				62DB56B81F8B5673006C9A10 /* PurchaseDealVC.h */,
+				62DB56B91F8B5673006C9A10 /* PurchaseDealVC.m */,
 				626228F61F88AC13007409EB /* HomeVC.h */,
 				626228F71F88AC13007409EB /* HomeVC.m */,
 				626228FB1F88E572007409EB /* MerchantLinkingID.h */,
@@ -195,6 +200,7 @@
 				626228F81F88AC13007409EB /* HomeVC.m in Sources */,
 				626228FD1F88E572007409EB /* MerchantLinkingID.m in Sources */,
 				6273922E1F879D1B00569BEB /* AppDelegate.m in Sources */,
+				62DB56BA1F8B5673006C9A10 /* PurchaseDealVC.m in Sources */,
 				6273922B1F879D1B00569BEB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,18 @@
 //
-//  MerchantLinkingID.m
+//  PurchaseDealVC.m
 //  Daily Deals
 //
-//  Created by Mac5 on 07/10/17.
+//  Created by Mac5 on 09/10/17.
 //  Copyright © 2017 Mac5. All rights reserved.
 //
 
-#import "MerchantLinkingID.h"
+#import "PurchaseDealVC.h"
 
-@interface MerchantLinkingID ()
+@interface PurchaseDealVC ()
 
 @end
 
-@implementation MerchantLinkingID
+@implementation PurchaseDealVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,4 @@
 }
 */
 
-- (IBAction)activateButtonAction:(id)sender {
-}
 @end
