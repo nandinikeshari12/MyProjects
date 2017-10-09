@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PurchaseDealVC : UIViewController
+@interface PurchaseDealVC : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *cashbackTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *hkTxtFld;

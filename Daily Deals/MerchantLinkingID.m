@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 600)];
     // Do any additional setup after loading the view.
 }
 
@@ -24,16 +25,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL)prefersStatusBarHidden
+{
+    return  true;
 }
-*/
 
-- (IBAction)activateButtonAction:(id)sender {
+- (IBAction)activateButtonAction:(id)sender
+{
+    
 }
+
+
+#pragma - mark TextView Delegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    [self.scrollView setContentOffset:CGPointMake(0,0)];
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+  [self.scrollView setContentOffset:CGPointMake(0,self.merchantIDTxtFld.frame.origin.y+150)];
+}
+
 @end

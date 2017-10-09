@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MerchantLinkingID : UIViewController
+@interface MerchantLinkingID : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *merchantIDTxtFld;
 

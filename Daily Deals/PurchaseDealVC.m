@@ -24,14 +24,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL)prefersStatusBarHidden
+{
+    return  true;
 }
-*/
+
+#pragma - mark TextView Delegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    [self.scrollView setContentOffset:CGPointMake(0,0)];
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField == self.cashbackTxtFld) {
+         [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-150)];
+    }
+    else if(textField == self.hkTxtFld)
+    {
+        [self.scrollView setContentOffset:CGPointMake(0,self.hkTxtFld.frame.origin.y-150)];
+    }
+    else
+    {
+        [self.scrollView setContentOffset:CGPointMake(0,self.hkTxtFld.frame.origin.y-150)];
+
+    }
+}
 
 @end
