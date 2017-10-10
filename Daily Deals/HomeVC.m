@@ -30,7 +30,11 @@
     return  true;
 }
 
-- (IBAction)enterManuallyButtonAction:(id)sender {
+- (IBAction)enterManuallyButtonAction:(id)sender
+{
+    PurchaseDealVC *purchaseDealVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PurchaseDealVC"];
+    purchaseDealVC.tempUserID = self.newUserID;
+    [self.navigationController pushViewController:purchaseDealVC animated:true];
 }
 
 - (IBAction)scanButtonAction:(id)sender {

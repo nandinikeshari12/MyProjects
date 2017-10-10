@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+#import "Constant.h"
+#import "HomeVC.h"
+
 
 @interface MerchantLinkingID : UIViewController<UITextFieldDelegate>
+{
+    NSMutableDictionary *responseData;
+    NSUInteger userID;
+}
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *merchantIDTxtFld;
 

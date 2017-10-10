@@ -7,11 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+#import "Constant.h"
 
-@interface PurchaseDealVC : UIViewController<UITextFieldDelegate>
+@interface PurchaseDealVC : UIViewController<UITextFieldDelegate,UIPickerViewDelegate>
+{
+    NSMutableDictionary *responseData;
+     UIPickerView *pickerViewTemp;
+    NSMutableArray *branchArray;
+    NSUInteger flag;
+   
+}
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *cashbackTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *hkTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *transactionTxtFld;
-
+@property NSUInteger tempUserID;
+@property (strong, nonatomic) IBOutlet UITextField *branchTxtFld;
+- (IBAction)submitButtonAction:(id)sender;
 @end

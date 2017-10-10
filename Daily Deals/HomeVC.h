@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PurchaseDealVC.h"
 @interface HomeVC : UIViewController
 
 - (IBAction)enterManuallyButtonAction:(id)sender;
 - (IBAction)scanButtonAction:(id)sender;
+@property NSUInteger newUserID;
 @end
