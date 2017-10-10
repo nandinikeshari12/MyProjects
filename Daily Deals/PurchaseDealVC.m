@@ -22,6 +22,11 @@
      [self doneButtonInNumberPad];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+   [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width,650)];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -30,6 +35,21 @@
 -(BOOL)prefersStatusBarHidden
 {
     return  true;
+}
+
+#pragma  - mark Button Action
+
+- (IBAction)submitButtonAction:(id)sender
+{
+    if ([self validation])
+    {
+        [self loadData];
+    }
+}
+
+- (IBAction)backButtonAction:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma - mark TextView Delegate Methods
@@ -44,7 +64,7 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if (textField == self.cashbackTxtFld) {
-         [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-150)];
+         [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-100)];
     }
     else if(textField == self.hkTxtFld)
     {
@@ -57,14 +77,11 @@
     }
     else
     {
-        flag = 1;
-       
         pickerViewTemp = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 50, 100, 150)];
-        //[pickerViewTemp setDataSource: self];
         [pickerViewTemp setDelegate: self];
         pickerViewTemp.showsSelectionIndicator = YES;
         textField.inputView = pickerViewTemp;
-        [self.scrollView setContentOffset:CGPointMake(0,self.hkTxtFld.frame.origin.y-150)];
+        [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-150)];
     }
     
 }
@@ -72,11 +89,11 @@
 -(void)loadData
 {
     
-    NSDictionary *params = @{@"userId":[NSNumber numberWithInteger:self.tempUserID],
+    NSDictionary *params = @{@"userId":[NSString stringWithFormat:@"%lu",(unsigned long)self.tempUserID],
                              @"cardNo":self.cashbackTxtFld.text,
                              @"amount":self.hkTxtFld.text,
                              @"invoiceId":self.transactionTxtFld.text,
-                             @"branch":self.branchTxtFld.text
+                             @"branch":[NSString stringWithFormat:@"%lu",(unsigned long)branchID]
                              };
     [self loadDataForListing:params];
     
@@ -101,8 +118,9 @@
         }
         else
         {
-            responseData = [responseObject valueForKey:@"responseData"];
-           
+            NSString *actionTitle=@"Cancel";
+           // responseData = [responseObject valueForKey:@"responseText"];
+            [self showAlertWithMessage:[responseObject valueForKey:@"responseText"] withAction:actionTitle];
             [SVProgressHUD dismiss];
             
         }
@@ -130,10 +148,8 @@
         }
         else
         {
-            
             branchArray = [responseObject valueForKey:@"responseData"];
             [SVProgressHUD dismiss];
-            
         }
     }];
     [dataTask resume];
@@ -217,12 +233,7 @@
 }
 
 
-- (IBAction)submitButtonAction:(id)sender
-{
-    if ([self validation]) {
-        [self loadData];
-    }
-}
+
 
 #pragma - mark PickerView Delegate Methods
 
@@ -236,7 +247,7 @@
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    
+        branchID = [[[branchArray objectAtIndex:row] valueForKey:@"branchId"] integerValue];
         self.branchTxtFld.text = [[branchArray objectAtIndex:row] valueForKey:@"branchName"];
 
 }

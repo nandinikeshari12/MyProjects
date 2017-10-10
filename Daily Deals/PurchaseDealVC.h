@@ -16,7 +16,7 @@
     NSMutableDictionary *responseData;
      UIPickerView *pickerViewTemp;
     NSMutableArray *branchArray;
-    NSUInteger flag;
+    NSUInteger branchID;
    
 }
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -26,4 +26,5 @@
 @property NSUInteger tempUserID;
 @property (strong, nonatomic) IBOutlet UITextField *branchTxtFld;
 - (IBAction)submitButtonAction:(id)sender;
+- (IBAction)backButtonAction:(id)sender;
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		623B204F1F8CA65B006D8535 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 623B204E1F8CA65B006D8535 /* Splash.png */; };
 		626228F01F88A58B007409EB /* Button 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 626228EF1F88A58B007409EB /* Button 3.png */; };
 		626228F21F88A887007409EB /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 626228F11F88A887007409EB /* Logo.png */; };
 		626228F81F88AC13007409EB /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 626228F71F88AC13007409EB /* HomeVC.m */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5EB42649BB8B7E5B3AFDF391 /* Pods-Daily Deals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Deals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Deals/Pods-Daily Deals.debug.xcconfig"; sourceTree = "<group>"; };
 		62296B781F8B84E60000F54C /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		623B204E1F8CA65B006D8535 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
 		626228EF1F88A58B007409EB /* Button 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button 3.png"; sourceTree = "<group>"; };
 		626228F11F88A887007409EB /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		626228F61F88AC13007409EB /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		626228F31F88A88C007409EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				623B204E1F8CA65B006D8535 /* Splash.png */,
 				626228F91F88DF16007409EB /* line_button.png */,
 				627392351F879D1B00569BEB /* Assets.xcassets */,
 				626228EF1F88A58B007409EB /* Button 3.png */,
@@ -213,6 +216,7 @@
 				627392391F879D1B00569BEB /* LaunchScreen.storyboard in Resources */,
 				627392361F879D1B00569BEB /* Assets.xcassets in Resources */,
 				626228F21F88A887007409EB /* Logo.png in Resources */,
+				623B204F1F8CA65B006D8535 /* Splash.png in Resources */,
 				626228F01F88A58B007409EB /* Button 3.png in Resources */,
 				627392341F879D1B00569BEB /* Main.storyboard in Resources */,
 				626228FA1F88DF16007409EB /* line_button.png in Resources */,
