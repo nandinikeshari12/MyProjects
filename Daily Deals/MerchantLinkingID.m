@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     responseData = [[NSMutableDictionary alloc]init];
+    self.merchantIDView.layer.cornerRadius = self.merchantIDView.frame.size.height/2;
+    self.merchantIDView.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+    self.merchantIDView.layer.borderWidth=1.0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +58,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-  [self.scrollView setContentOffset:CGPointMake(0,self.merchantIDTxtFld.frame.origin.y-200)];
+  [self.scrollView setContentOffset:CGPointMake(0,80)];
 }
 
 
@@ -86,8 +90,10 @@
         {
             responseData = [responseObject valueForKey:@"responseData"];
             userID = [[responseData valueForKey:@"userId"] integerValue];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%lu",(unsigned long)userID] forKey:@"UserID"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
             HomeVC *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
-            homeVC.newUserID = userID;
+            //homeVC.newUserID = userID;
             [self.navigationController pushViewController:homeVC animated:YES];
             [SVProgressHUD dismiss];
             

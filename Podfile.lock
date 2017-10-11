@@ -15,10 +15,14 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - SVProgressHUD (2.2.1)
+  - ZXingObjC (3.2.1):
+    - ZXingObjC/All (= 3.2.1)
+  - ZXingObjC/All (3.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - ZXingObjC (~> 3.2.1)
 
 EXTERNAL SOURCES:
   SVProgressHUD:
@@ -32,7 +36,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
+  ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
 
-PODFILE CHECKSUM: 340f718e9de4688723130a2b78dfcff91b6175d0
+PODFILE CHECKSUM: 251ba856a942ca0be5912c2ba0b150ee93819af2
 
 COCOAPODS: 1.3.1

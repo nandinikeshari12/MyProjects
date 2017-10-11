@@ -23,8 +23,15 @@
 @property (strong, nonatomic) IBOutlet UITextField *cashbackTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *hkTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *transactionTxtFld;
+@property (strong, nonatomic) NSString *barcodeID;
+@property(assign) BOOL isComingFromScanVC;
 @property NSUInteger tempUserID;
 @property (strong, nonatomic) IBOutlet UITextField *branchTxtFld;
 - (IBAction)submitButtonAction:(id)sender;
 - (IBAction)backButtonAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *cashbackView;
+@property (strong, nonatomic) IBOutlet UIView *purchaseAmountView;
+@property (strong, nonatomic) IBOutlet UIView *transactionView;
+@property (strong, nonatomic) IBOutlet UIView *branchView;
+
 @end

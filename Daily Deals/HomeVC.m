@@ -7,6 +7,7 @@
 //
 
 #import "HomeVC.h"
+#import "BarcodeScannerVC.h"
 
 @interface HomeVC ()
 
@@ -37,6 +38,12 @@
     [self.navigationController pushViewController:purchaseDealVC animated:true];
 }
 
-- (IBAction)scanButtonAction:(id)sender {
+- (IBAction)scanButtonAction:(id)sender
+{
+    
+    BarcodeScannerVC *purchaseDealVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BarcodeScannerVC"];
+   // purchaseDealVC.tempUserID = self.newUserID;
+    [self.navigationController pushViewController:purchaseDealVC animated:true];
+    
 }
 @end

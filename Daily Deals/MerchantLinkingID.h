@@ -20,6 +20,8 @@
 }
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *merchantIDTxtFld;
+@property (strong, nonatomic) IBOutlet UIButton *merchantIDBtn;
+@property (strong, nonatomic) IBOutlet UIView *merchantIDView;
 
 - (IBAction)activateButtonAction:(id)sender;
 @end
