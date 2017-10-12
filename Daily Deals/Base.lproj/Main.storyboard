@@ -228,18 +228,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-NA-4ja">
-                                                <rect key="frame" x="13" y="136" width="222" height="167"/>
+                                                <rect key="frame" x="13" y="149" width="246" height="185"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjZ-kj-K3G">
-                                                        <rect key="frame" x="8" y="100" width="206" height="50"/>
+                                                        <rect key="frame" x="8" y="100" width="230" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MerchantIDIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rAQ-SX-XeC">
-                                                                <rect key="frame" x="10" y="16" width="20" height="20"/>
+                                                                <rect key="frame" x="10" y="17" width="20" height="20"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Merchant ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMN-se-gzv">
-                                                                <rect key="frame" x="37" y="11" width="165" height="30"/>
+                                                                <rect key="frame" x="37" y="11" width="189" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -252,21 +252,21 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please link account using merchant ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LK-6p-vK0">
-                                                        <rect key="frame" x="8" y="47" width="204" height="21"/>
+                                                        <rect key="frame" x="8" y="47" width="228" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" red="0.6547120213508606" green="0.65880823135375977" blue="0.66287058591842651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MERCHANT ACCOUNT LINKING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-S2-7Py">
-                                                        <rect key="frame" x="0.0" y="8" width="222" height="28"/>
+                                                        <rect key="frame" x="0.0" y="8" width="246" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                         <color key="textColor" red="0.95059460401535034" green="0.73447179794311523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-Sl-D34">
-                                                        <rect key="frame" x="8" y="167" width="205" height="50"/>
+                                                        <rect key="frame" x="8" y="167" width="229" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="1" green="0.77362185716629028" blue="0.0069386735558509827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -375,7 +375,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="coU-JD-Xdw" id="gRA-Uo-giA"/>
                                                         </connections>
@@ -417,7 +417,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="coU-JD-Xdw" id="CrK-H1-eD4"/>
                                                         </connections>
@@ -526,7 +526,9 @@
                         <outlet property="branchView" destination="5O8-zm-Ykz" id="4yp-ET-a5T"/>
                         <outlet property="cashbackTxtFld" destination="jrB-y5-bHy" id="M81-wB-jAq"/>
                         <outlet property="cashbackView" destination="pNb-Fg-grP" id="bTj-HI-l3A"/>
+                        <outlet property="contentHgt" destination="GBZ-Ot-zpR" id="jlg-aa-7z8"/>
                         <outlet property="hkTxtFld" destination="TV0-An-Kc4" id="5X0-EM-WiO"/>
+                        <outlet property="logoImageView" destination="0iQ-5F-fKm" id="K3L-qr-Csb"/>
                         <outlet property="purchaseAmountView" destination="AeI-ry-ps7" id="y1n-cL-7BT"/>
                         <outlet property="scrollView" destination="YZF-A7-aCM" id="dbc-8L-Ief"/>
                         <outlet property="submitBtn" destination="0IL-e8-AN3" id="hle-ND-9yN"/>

@@ -19,6 +19,7 @@
     NSUInteger branchID;
    
 }
+@property (strong, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *cashbackTxtFld;
 @property (strong, nonatomic) IBOutlet UITextField *hkTxtFld;

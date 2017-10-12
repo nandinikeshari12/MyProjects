@@ -12,6 +12,10 @@
 @interface PurchaseDealVC ()
 {
     UIToolbar *datePickerToolbar;
+    
+    IBOutlet NSLayoutConstraint *contentHgt;
+    
+    CGFloat originalScrollViewContentHgt;
 }
 
 @end
@@ -41,6 +45,19 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [self.view layoutIfNeeded];
+    originalScrollViewContentHgt=contentHgt.constant;
+    if(_logoImageView.frame.size.height>148)
+    {
+        contentHgt.constant=contentHgt.constant+(_logoImageView.frame.size.height-148);
+        originalScrollViewContentHgt=contentHgt.constant;
+        [self setScrollNormalContentHgt];
+    }
+}
+
+-(void)setScrollNormalContentHgt
+{
+    contentHgt.constant=originalScrollViewContentHgt;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,13 +116,14 @@
 {
     [textField resignFirstResponder];
     [self.scrollView setContentOffset:CGPointMake(0,0)];
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+    [self setScrollNormalContentHgt];
     return YES;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height+200)];
+    
+    contentHgt.constant=originalScrollViewContentHgt+200;
     if (textField == self.cashbackTxtFld)
     {
         // [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-100)];
@@ -365,7 +383,8 @@
     
     
     [self createCancelToolBar];
-    
+    self.cashbackTxtFld.inputAccessoryView = datePickerToolbar;
+    self.transactionTxtFld.inputAccessoryView = datePickerToolbar;
     self.branchTxtFld.inputAccessoryView = datePickerToolbar;
     self.hkTxtFld.inputAccessoryView = datePickerToolbar;
 }
@@ -396,7 +415,7 @@
 {
     NSLog(@"Done Clicked.");
     [self.scrollView setContentOffset:CGPointMake(0,0)];
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+    [self setScrollNormalContentHgt];
     [self.view endEditing:YES];
 }
 
