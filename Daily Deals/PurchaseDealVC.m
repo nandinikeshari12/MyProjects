@@ -14,7 +14,7 @@
     UIToolbar *datePickerToolbar;
     
     IBOutlet NSLayoutConstraint *contentHgt;
-    
+    CGRect keyboardFrameBeginRect;
     CGFloat originalScrollViewContentHgt;
 }
 
@@ -41,6 +41,18 @@
     }
     
     self.submitBtn.layer.cornerRadius = self.submitBtn.frame.size.height/2;
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(myNotificationMethod:)
+//                                                 name:UIKeyboardDidShowNotification
+//                                               object:nil];
+}
+
+- (void)myNotificationMethod:(NSNotification*)notification
+{
+    NSDictionary* keyboardInfo = [notification userInfo];
+    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
+    keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -123,18 +135,18 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     
-    contentHgt.constant=originalScrollViewContentHgt+200;
+    contentHgt.constant=originalScrollViewContentHgt+230;
     if (textField == self.cashbackTxtFld)
     {
-        // [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-100)];
+       [self.scrollView setContentOffset:CGPointMake(0,self.purchaseAmountView.frame.size.height+30)];
     }
     else if(textField == self.hkTxtFld)
     {
-        [self.scrollView setContentOffset:CGPointMake(0,80)];
+        [self.scrollView setContentOffset:CGPointMake(0,self.cashbackView.frame.origin.y-50)];
     }
     else if(textField == self.transactionTxtFld)
     {
-        [self.scrollView setContentOffset:CGPointMake(0,130)];
+        [self.scrollView setContentOffset:CGPointMake(0,self.cashbackView.frame.origin.y-50)];
 
     }
     else
@@ -144,7 +156,7 @@
         pickerViewTemp.showsSelectionIndicator = YES;
         pickerViewTemp.backgroundColor = [UIColor whiteColor];
         textField.inputView = pickerViewTemp;
-        [self.scrollView setContentOffset:CGPointMake(0,150)];
+        [self.scrollView setContentOffset:CGPointMake(0,self.transactionView.frame.origin.y-60)];
     }
     
 }
