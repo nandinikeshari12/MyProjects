@@ -20,6 +20,7 @@
     self.merchantIDView.layer.cornerRadius = self.merchantIDView.frame.size.height/2;
     self.merchantIDView.layer.borderColor = [[UIColor lightGrayColor]CGColor];
     self.merchantIDView.layer.borderWidth=1.0;
+    self.activateBtn.layer.cornerRadius = self.activateBtn.frame.size.height/2;
     
 }
 
@@ -42,7 +43,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 650)];
+//    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 650)];
  
 }
 
@@ -58,6 +59,8 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height+200)];
+
   [self.scrollView setContentOffset:CGPointMake(0,80)];
 }
 

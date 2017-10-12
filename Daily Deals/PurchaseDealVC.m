@@ -35,11 +35,12 @@
     {
         _cashbackTxtFld.text=self.barcodeID;
     }
+    
+    self.submitBtn.layer.cornerRadius = self.submitBtn.frame.size.height/2;
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-   [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width,700)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,11 +99,13 @@
 {
     [textField resignFirstResponder];
     [self.scrollView setContentOffset:CGPointMake(0,0)];
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
     return YES;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height+200)];
     if (textField == self.cashbackTxtFld)
     {
         // [self.scrollView setContentOffset:CGPointMake(0,self.cashbackTxtFld.frame.origin.y-100)];
@@ -118,7 +121,7 @@
     }
     else
     {
-        pickerViewTemp = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 50, 100, 150)];
+        pickerViewTemp = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 50, 100, 200)];
         [pickerViewTemp setDelegate: self];
         pickerViewTemp.showsSelectionIndicator = YES;
         pickerViewTemp.backgroundColor = [UIColor whiteColor];
@@ -393,6 +396,7 @@
 {
     NSLog(@"Done Clicked.");
     [self.scrollView setContentOffset:CGPointMake(0,0)];
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
     [self.view endEditing:YES];
 }
 

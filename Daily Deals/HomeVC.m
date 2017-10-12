@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+     self.enterManuallyBtn.layer.cornerRadius = self.enterManuallyBtn.frame.size.height/2;
+     self.scanBtn.layer.cornerRadius = self.scanBtn.frame.size.height/2;
 }
 
 - (void)didReceiveMemoryWarning

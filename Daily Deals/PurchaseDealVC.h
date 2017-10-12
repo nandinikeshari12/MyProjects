@@ -33,5 +33,6 @@
 @property (strong, nonatomic) IBOutlet UIView *purchaseAmountView;
 @property (strong, nonatomic) IBOutlet UIView *transactionView;
 @property (strong, nonatomic) IBOutlet UIView *branchView;
+@property (strong, nonatomic) IBOutlet UIButton *submitBtn;
 
 @end

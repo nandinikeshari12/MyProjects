@@ -12,5 +12,7 @@
 
 - (IBAction)enterManuallyButtonAction:(id)sender;
 - (IBAction)scanButtonAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *scanBtn;
 @property NSUInteger newUserID;
+@property (strong, nonatomic) IBOutlet UIButton *enterManuallyBtn;
 @end

@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *merchantIDTxtFld;
 @property (strong, nonatomic) IBOutlet UIButton *merchantIDBtn;
 @property (strong, nonatomic) IBOutlet UIView *merchantIDView;
+@property (strong, nonatomic) IBOutlet UIButton *activateBtn;
 
 - (IBAction)activateButtonAction:(id)sender;
 @end
